@@ -1,6 +1,39 @@
 module.exports = {
   siteMetadata: {
-    title: "form",
+    title: `Gatsboard`,
+    description: `Gatsboard is a cool soundboard that trigger sounds.`,
+    author: `@flippingmyworld`,
   },
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Questrial',
+              variants: ['400', '700'],
+            },
+          ],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsboard`,
+        short_name: `Gatsboard`,
+        display: `standalone`,
+        start_url: `/`,
+        background_color: `#0F2026`,
+        theme_color: `#F23064`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // `gatsby-plugin-gatsby-cloud`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
+  ],
+};
