@@ -52,6 +52,7 @@ const BoardList = () => {
 
         <Flex flexWrap="wrap" mx={-2}>
           {boards.map((board) => {
+              console.log(board)
             const ytPads = board.pads.filter((pad) =>
             get_youtube_thumbnail(pad.url)
             );

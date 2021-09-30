@@ -1,23 +1,23 @@
 
-# Gatsby FuncJam '21
+# The Funky GatsBoard - Gatsby FuncJam '21
 
-This example shows how to build a form with [react-hook-form](https://react-hook-form.com/) that submits to a Gatsby Function.
+This Web app let's you create soundboard from different sources (youtube, soundcloud, vimeo...).
 
 1.  **Start developing.**
 
-    To get started clone this repo locally and run `npm install` to add all necessary packages.
+    To get started clone this repo locally.
+    You need to create an Firebase account, with an empty collection named "boards" in  Firestore .Once you did that, add the appid and apiKey in an env.developement file like so:
+    ```shell
+    FIREBASE_apiKey=YourfirebaseapiKey
+    FIREBASE_appId=YourfirebaseappId
+    ```
+    
+    and run 
 
     ```shell
-    cd examples/functions-basic-form
     npm install
     npm run develop
     ```
-
-2.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/form
-
-    Try editing the function in `src/api/form.ts` or form at `src/pages/index.js`
 
 3.  **Deploy**
 
@@ -26,12 +26,6 @@ You can deploy this example on Gatsby Cloud by copying the example into a new re
 
 ## Submission Checklist
 
-- [ ] Add installation documentation to the README
+- [x] Add installation documentation to the README
 - [x] Update the `/api` folder with your function
 - [ ] Submit your theme at https://gatsbyjs.com/func-jam-21/
-
-## Helpful Links
-
-Read the Gatsby [functions docs](https://www.gatsbyjs.com/docs/reference/functions/).
-Check out this video all about Gatsby functions 
-Take a look at the Functions Use Cases over [here](https://www.gatsbyjs.com/products/cloud/functions/). 

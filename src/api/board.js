@@ -2,7 +2,7 @@ import db from '../../firebase';
 import { getDoc, doc } from 'firebase/firestore/lite';
 
 async function getBoard(id) {
-  const boardRef = doc(db, 'pads', id);
+  const boardRef = doc(db, 'boards', id);
   const boardSnapshot = await getDoc(boardRef);
   if (boardSnapshot.exists()) {
     const boardData = boardSnapshot.data();

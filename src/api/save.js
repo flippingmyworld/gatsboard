@@ -2,7 +2,7 @@ import db from '../../firebase';
 import { collection, addDoc } from 'firebase/firestore/lite';
 
 async function addBoard(data) {
-  const boardCol = collection(db, 'pads');
+  const boardCol = collection(db, 'boards');
   const newBoardSnapshot = await addDoc(boardCol, data);
   return newBoardSnapshot.id;
 }
