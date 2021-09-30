@@ -12,8 +12,8 @@ import { withPrefix } from "gatsby";
 // import './App.global.scss';
 import GroupsTabs from "./GroupsTabs";
 import { reorderPads, pressKey } from "../redux/actions/pads";
-import { updateSettings ,loadProject} from "../redux/actions/settings";
-import Notifications from "./Notifications";
+import { updateSettings, loadProject } from "../redux/actions/settings";
+// import Notifications from "./Notifications";
 import Search from "./Search";
 import { GlobalStyle, SiteWrapper } from "../theme/Site.style";
 import theme from "../theme";
@@ -44,7 +44,7 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
   }, []);
   useEffect(() => {
     if (project) {
-      if(project.settings.id!==settings.id){
+      if (project.settings.id !== settings.id) {
         dispatch(loadProject(project));
       }
     }
@@ -141,12 +141,12 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
         <Box minHeight="100vh" width="100%" bg="background" color="text">
           <Flex alignItems="center" flexWrap={["wrap", "nowrap"]}>
             <Flex p={2} alignItems="center" justifyContent="left" width="100%">
-            <StaticImage
-            src="../../static/img/gatsboard.png"
-            alt="Gatsboard"
-            placeholder="blurred"
-            height={50}
-          />
+              <StaticImage
+                src="../../static/img/gatsboard.png"
+                alt="Gatsboard"
+                placeholder="blurred"
+                height={50}
+              />
               <Heading as="h1" width="100%">
                 <Input
                   sx={{ border: "none", fontWeight: "bold" }}
@@ -240,8 +240,6 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
             </DndContext>
           </Flex>
         </Box>
-
-        <Notifications />
       </SiteWrapper>
     </ThemeProvider>
   );
