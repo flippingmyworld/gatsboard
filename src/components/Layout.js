@@ -6,9 +6,9 @@ import { withPrefix } from 'gatsby';
 import { GlobalStyle, SiteWrapper } from '../theme/Site.style';
 import theme from '../theme';
 
-const Layout = ({children}) => {
-  const title = 'Gatsboard';
-  const description = 'Gatsboard is a cool soundboard that trigger sounds.';
+const Layout = ({children,title,description}) => {
+  title = title || 'The Funky Gastboard';
+  description = description||'Gatsboard is a cool soundboard that trigger sounds.';
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -20,8 +20,7 @@ const Layout = ({children}) => {
           </title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
-          <meta property="og:url" content="/" />
-          <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
+          <meta property="og:image" content={`${withPrefix('/')}img/image-og.jpg`} />
         </Helmet>
         <Box minHeight="100vh" width="100%" bg="background" color="text">
         {children}

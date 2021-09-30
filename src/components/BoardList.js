@@ -56,7 +56,7 @@ const BoardList = () => {
             );
             const imageUrl = ytPads.length
               ? get_youtube_thumbnail(ytPads[0].url)
-              : "/img/gatsboard.png";
+              : "/img/image-og.jpg";
             return (
               <Box key={board.settings.id} width={[1, 1 / 2, 1 / 3]}>
                 <Link to={"/board/" + board.settings.id}>

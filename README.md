@@ -28,4 +28,4 @@ You can deploy this example on Gatsby Cloud by copying the example into a new re
 
 - [x] Add installation documentation to the README
 - [x] Update the `/api` folder with your function
-- [ ] Submit your theme at https://gatsbyjs.com/func-jam-21/
+- [x] Submit your theme at https://gatsbyjs.com/func-jam-21/

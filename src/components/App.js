@@ -118,7 +118,7 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
       ></div>
     );
   }
-  const title = "Gatsboard";
+  const title = "Gatsboard App";
   const description = "Gatsboard is a cool soundboard that trigger sounds.";
   return (
     <ThemeProvider theme={themeState}>
@@ -132,10 +132,9 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
           </title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
-          <meta property="og:url" content="/" />
           <meta
             property="og:image"
-            content={`${withPrefix("/")}img/og-image.jpg`}
+            content={`${withPrefix("/")}img/image-og.jpg`}
           />
         </Helmet>
         <Box minHeight="100vh" width="100%" bg="background" color="text">

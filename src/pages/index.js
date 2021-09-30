@@ -28,7 +28,7 @@ const Page = () => {
         };
     }, []);
   return (
-    <Layout>
+    <Layout >
       <Box backgroundColor={scrollPosition>200 ? "background":"transparent"} sx={{ zIndex:9999,transition:"all 200ms ease", position: "fixed", top: 0, width: "100%" }}>
         <Box variant="container" py={5}>
           <Flex px={2} alignItems="center" sx={{ position: "relative" }}>
@@ -75,7 +75,7 @@ const Page = () => {
             placeholder="blurred"
             width={600}
           />
-          <Heading pb={4}>A soundboard made width GatsbyJS</Heading>
+          <Heading pb={4}>A soundboard made with GatsbyJS</Heading>
           <Button variant='primaryBig' onClick={()=>window.scrollTo({ behavior: 'smooth', top: createRef.current.offsetTop })}>More Infos</Button>
         </Flex>
         <div class="custom-shape-divider-bottom-1632974164">
