@@ -1,19 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Box, Flex, Button, Heading } from 'rebass/styled-components';
 import { Label, Input } from '@rebass/forms/styled-components';
 import Icon from './ui/Icon';
 import { addPad, defaultPad } from '../redux/actions/pads';
 import { ThemeProvider } from 'styled-components';
-import ReactPlayer from 'react-player';
 import Modal from './ui/Modal';
-
 const EmptyPad = ({ theme, currentGroup, dispatch }) => {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [newPad, setNewPad] = useState({ name: '', url: '' });
 
   const createPad = () => {
-    if (ReactPlayer.canPlay(newPad.url)) {
+    if (newPad.url!=="") {
       dispatch(
         addPad({
           ...defaultPad,
@@ -113,7 +111,7 @@ const EmptyPad = ({ theme, currentGroup, dispatch }) => {
             />
           </Box>
           <Box width={1 / 1} p={2}>
-            <Button opacity={ReactPlayer.canPlay(newPad.url) ? 1 : 0.5} onClick={createPad} mr={1}>
+            <Button opacity={newPad.url!=="" ? 1 : 0.5} onClick={createPad} mr={1}>
               Create a new pad
             </Button>
           </Box>

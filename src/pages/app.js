@@ -12,7 +12,7 @@ import { withPrefix } from 'gatsby';
 // import './App.global.scss';
 import GroupsTabs from '../components/GroupsTabs';
 import { reorderPads, pressKey } from '../redux/actions/pads';
-import { loadProject, updateSettings } from '../redux/actions/settings';
+import {  updateSettings } from '../redux/actions/settings';
 import Notifications from '../components/Notifications';
 import Search from '../components/Search';
 import { GlobalStyle, SiteWrapper } from '../theme/Site.style';

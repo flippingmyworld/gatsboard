@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
-import { Box, Flex, Heading, Button } from 'rebass/styled-components';
-import { Input, Label } from '@rebass/forms/styled-components';
-import { updateSettings } from '../redux/actions/settings';
+import { Box,  Heading, Button } from 'rebass/styled-components';
+import { Input,  } from '@rebass/forms/styled-components';
 import Icon from './ui/Icon';
 import Modal from './ui/Modal';
 const ShareModal = ({ boardId, title }) => {
@@ -22,7 +21,6 @@ const ShareModal = ({ boardId, title }) => {
       setCopySuccess('');
     }, 3000);
   };
-  const copy = () => {};
   if (!boardId) {
     return null;
   }
@@ -53,8 +51,7 @@ const ShareModal = ({ boardId, title }) => {
           <Box textAlign="center" py={2}>
             <a
               href={'http://facebook.com/sharer.php?u=' + link}
-              target="_blank"
-              rel="noopener"
+              target="_blank" rel="noreferrer"
               style={{
                 transition: 'all 200ms ease',
                 padding: '10px',
@@ -72,7 +69,7 @@ const ShareModal = ({ boardId, title }) => {
             <a
               href={'http://twitter.com/intent/tweet?url=' + link + '&text=' + title}
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
               style={{
                 transition: 'all 200ms ease',
                 padding: '10px',
@@ -94,8 +91,7 @@ const ShareModal = ({ boardId, title }) => {
                 '&Body=Check my funky Gatsboard ! :' +
                 link
               }
-              target="_blank"
-              rel="noopener"
+              target="_blank" rel="noreferrer"
               style={{
                 transition: 'all 200ms ease',
                 padding: '10px',

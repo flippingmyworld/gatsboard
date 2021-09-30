@@ -3,20 +3,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { Box, Flex, Text, Heading, Button } from 'rebass/styled-components';
-import { Label, Input, Select, Checkbox, Slider } from '@rebass/forms/styled-components';
+import { Label, Input, Select,  Slider } from '@rebass/forms/styled-components';
 import styled, { ThemeProvider } from 'styled-components';
 import { updatePad, removePad, addPad, defaultPad } from '../redux/actions/pads';
-import { newKeyPress } from '../redux/actions/settings';
 import Icon from './ui/Icon';
 import Modal from './ui/Modal';
-import ReactPlayer from 'react-player';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import ConfirmModal from './ConfirmModal';
 
-import { Range } from 'rc-slider';
+import ReactPlayer from 'react-player'; 
 import 'rc-slider/assets/index.css';
-
+import loadable from "@loadable/component"
+const Range = loadable(() => import('rc-slider'), {
+  resolveComponent: (components) => components.Range,
+ })
 const LoadingBar = styled.div.attrs((props) => ({
   style: {
     width: props.progression,
@@ -62,7 +63,6 @@ const Pad = ({
     light: false,
     volume: 0.8,
     muted: false,
-    played: 0,
     loaded: 0,
     duration: 0,
     playbackRate: 1.0,
@@ -303,7 +303,6 @@ const Pad = ({
                     left: 0,
                     right: 0,
                     zIndex: 1,
-                    background: 'rgb(0,0,0)',
                     background: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
                   }}
                 ></Box>
@@ -342,7 +341,7 @@ const Pad = ({
                         onReady={() => setPlayerState({ ...playerState, ready: true })}
                         onPause={() => setPlayerState({ ...playerState, playing: false })}
                         onDuration={(duration) => {
-                          if (pad.end == 0 || pad.end == null) {
+                          if (pad.end === 0 || pad.end === null) {
                             setPad({ end: duration });
                           }
                         }}
@@ -591,7 +590,7 @@ const Pad = ({
                     </Button>
 
                     <Button mx={1}>
-                      <a href={pad.url} target="_blank">
+                      <a href={pad.url} target="_blank" rel="noreferrer">
                         <Icon icon="external" />
                       </a>
                     </Button>

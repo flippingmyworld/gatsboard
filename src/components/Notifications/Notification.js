@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import {
   updateNotification,
   removeNotification,
-  addNotification,
 } from '../../redux/actions/notifications';
 
 const Notification = ({ notification, zIndex, dispatch }) => {

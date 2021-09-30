@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import App from '../app';
 import { connect } from 'react-redux';
 import { loadProject } from '../../redux/actions/settings';

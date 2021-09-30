@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Flex, Button, Heading } from 'rebass/styled-components';
+import { Box, Flex, Button} from 'rebass/styled-components';
 import { connect } from 'react-redux';
 import { withTheme } from 'styled-components';
 import Notification from './Notification';
