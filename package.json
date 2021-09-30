@@ -2,10 +2,8 @@
   "name": "gatsboard",
   "version": "0.1.0",
   "description": "Gatsboard is a cool soundboard that trigger sounds.",
-  "main": "main.js",
   "author": "Flippingmyworld <contact@flippingmyworld.com>",
-  "license": "MIT",
-  "private": false,
+  "private": true,
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

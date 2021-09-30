@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 function get_youtube_thumbnail(url, quality) {
   if (url) {
-    var video_id, thumbnail, result;
+    var video_id,  result;
     if ((result = url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/))) {
       video_id = result.pop();
     } else if ((result = url.match(/youtu.be\/(.{11})/))) {
@@ -25,9 +25,7 @@ function get_youtube_thumbnail(url, quality) {
         quality_key = "hqdefault";
       }
 
-      var thumbnail =
-        "http://img.youtube.com/vi/" + video_id + "/" + quality_key + ".jpg";
-      return thumbnail;
+      return "http://img.youtube.com/vi/" + video_id + "/" + quality_key + ".jpg";
     }
   }
   return false;

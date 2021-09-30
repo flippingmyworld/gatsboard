@@ -108,7 +108,9 @@ const Page = () => {
             <Box width={[1, 1, 1 / 2]} py={2}>
               <Heading variant="sectionTitle">Create !</Heading>
               <Text py={3}>
-                Get your best groovy songs, sounds, memes from Youtube, Soundcloud, Vimeo and turn it to a real <Text as="span" fontWeight="bold">funky Gatsboard</Text>!
+                Get your best groovy songs, sounds, memes from Youtube, Soundcloud, Vimeo...
+                </Text>
+                <Text pb={3}>Drag it, trim it, Fade it and turn it to a real <Text as="span" fontWeight="bold">funky Gatsboard</Text>!
               </Text>
               <Link to="/app"><Button variant='primaryBig'>Let's Create</Button></Link>
             </Box>
@@ -127,7 +129,7 @@ const Page = () => {
             <Box width={[1, 1, 1 / 2]} py={2} textAlign={["left","left","right"]}>
               <Heading variant="sectionTitle">Share !</Heading>
               <Text py={3}>
-                Because "sharing is caring", go sociadelic and share your best <Text as="span" fontWeight="bold">Gatsboard</Text>
+                Because "sharing is caring", go socialdelic and share your best <Text as="span" fontWeight="bold">Gatsboard</Text>
               </Text>
               <Link to="/app"><Button variant='primaryBig'>Let's Create!</Button></Link>
             </Box>
