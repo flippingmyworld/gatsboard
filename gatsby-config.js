@@ -17,18 +17,25 @@ module.exports = {
           ],
         },
       },
+    },{
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {"/*": [
+          "Referrer-Policy: strict-origin-when-cross-origin",
+        ],}, 
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsboard`,
-        short_name: `Gatsboard`,
+        name: `Macaw`,
+        short_name: `Macaw`,
         display: `standalone`,
         start_url: `/`,
         background_color: `#0F2026`,
         theme_color: `#F23064`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     // `gatsby-plugin-gatsby-cloud`,
