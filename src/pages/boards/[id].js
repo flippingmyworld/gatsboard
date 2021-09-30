@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import App from '../app';
-import { connect } from 'react-redux';
-import { loadProject } from '../../redux/actions/settings';
-import ReduxWrapper from "../..//redux"
-const Board = ({ id, dispatch }) => {
+import React, { useEffect ,useState} from 'react';
+import App from '../../components/App';
+import ReduxWrapper from "../../redux"
+
+const Board = ({ id }) => {
+  const [project, setProject] = useState(false);
   useEffect(() => {
     const requestOptions = {
       method: 'POST',
@@ -15,11 +15,11 @@ const Board = ({ id, dispatch }) => {
       .then((data) => {
         if (data.result.length) {
           console.log(data.result[0], 'data.result[0]');
-          dispatch(loadProject(data.result[0]));
+          setProject(data.result[0])
         }
       });
   }, []);
-  return <ReduxWrapper><App /></ReduxWrapper>;
+  return <ReduxWrapper><App project={project}/></ReduxWrapper>;
 };
 
-export default connect()(Board);
+export default Board;
