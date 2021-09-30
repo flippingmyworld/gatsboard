@@ -41,13 +41,13 @@ const Page = () => {
             height={50}
           />
             <Box mx="auto" />
-            <Button variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: createRef.current.offsetTop })}>
+            <Button display={['none','block']} variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: createRef.current.offsetTop })}>
               Create
             </Button>
-            <Button variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: shareRef.current.offsetTop })}>
+            <Button display={['none','block']}variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: shareRef.current.offsetTop })}>
               Share
             </Button>
-            <Button variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: discoverRef.current.offsetTop })}>
+            <Button display={['none','block']} variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: discoverRef.current.offsetTop })}>
               Discover
             </Button>
             <Button  ml={2}>
