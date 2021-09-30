@@ -1,7 +1,7 @@
 {
   "name": "gatsboard",
   "version": "0.1.0",
-  "description": "Gatsboard is a cool soundboard that trigger sounds.",
+  "description": "The Funky Gatsboard is a soundboard made with GatsbyJS.",
   "author": "Flippingmyworld <contact@flippingmyworld.com>",
   "private": true,
   "scripts": {

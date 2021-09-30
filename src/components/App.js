@@ -115,7 +115,7 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
     );
   }
   const title = "Gatsboard App";
-  const description = "Gatsboard is a cool soundboard that trigger sounds.";
+  const description = "The Funky Gatsboard is a soundboard made with GatsbyJS.";
   return (
     <ThemeProvider theme={themeState}>
       <GlobalStyle />
@@ -133,12 +133,16 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
         <Box minHeight="100vh" width="100%" bg="background" color="text">
           <Flex alignItems="center" flexWrap={["wrap", "nowrap"]}>
             <Flex p={2} alignItems="center" justifyContent="left" width="100%">
+            <a href="/"
+            target="_blank"
+            rel="noreferrer">
               <StaticImage
                 src="../../static/img/gatsboard.png"
                 alt="Gatsboard"
                 placeholder="blurred"
                 height={50}
               />
+              </a>
               <Heading as="h1" width="100%">
                 <Input
                   sx={{ border: "none", fontWeight: "bold" }}

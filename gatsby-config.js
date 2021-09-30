@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsboard`,
-    description: `Gatsboard is a cool soundboard that trigger sounds.`,
+    description: `The Funky Gatsboard is a soundboard made with GatsbyJS.`,
     author: `@flippingmyworld`,
   },
   plugins: [
@@ -40,7 +40,7 @@ module.exports = {
         background_color: `#0F2026`,
         theme_color: `#F23064`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // `gatsby-plugin-gatsby-cloud`,

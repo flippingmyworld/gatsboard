@@ -7,7 +7,7 @@ import theme from '../theme';
 
 const Layout = ({children,title,description}) => {
   title = title || 'The Funky Gastboard';
-  description = description||'Gatsboard is a cool soundboard that trigger sounds.';
+  description = description||'The Funky Gatsboard is a soundboard made with GatsbyJS.';
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
