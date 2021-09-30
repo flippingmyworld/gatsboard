@@ -41,6 +41,12 @@ const theme = {
       fontWeight: '700',
       fontSize: [3, 4, 5],
     },
+    bigTitle:{
+      fontSize:[4,5,7,9]
+    },
+    sectionTitle:{
+      fontSize:[4,5,7]
+    },
     h3: {
       variant: 'heading',
       fontSize: [2, 3, 4],

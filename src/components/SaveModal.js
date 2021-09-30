@@ -23,7 +23,7 @@ const SaveModal = ({ state, dispatch }) => {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          navigate('/boards/' + data.result);
+          navigate('/board/' + data.result);
         });
     }
   };

@@ -24,7 +24,7 @@ const ShareModal = ({ boardId, title }) => {
   if (!boardId) {
     return null;
   }
-  const link = baseUrl + '/boards/' + boardId;
+  const link = baseUrl + '/board/' + boardId;
   return (
     <>
       <Button
@@ -112,7 +112,7 @@ const ShareModal = ({ boardId, title }) => {
               name="board-name"
               type="text"
               placeholder="My Funky GatsbBoard name"
-              value={baseUrl + '/boards/' + boardId}
+              value={baseUrl + '/board/' + boardId}
               ref={textAreaRef}
             />
           </Box>

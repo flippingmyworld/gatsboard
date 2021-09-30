@@ -32,7 +32,9 @@ const Page = () => {
       <Box backgroundColor={scrollPosition>200 ? "background":"transparent"} sx={{ zIndex:9999,transition:"all 200ms ease", position: "fixed", top: 0, width: "100%" }}>
         <Box variant="container" py={5}>
           <Flex px={2} alignItems="center" sx={{ position: "relative" }}>
+          
           <StaticImage
+          onClick={()=>window.scrollTo({ behavior: 'smooth', top: 0})}
             src="../../static/img/gatsboard.png"
             alt="Gatsboard"
             placeholder="blurred"
@@ -48,7 +50,7 @@ const Page = () => {
             <Button variant="ninja" px={1} onClick={()=>window.scrollTo({ behavior: 'smooth', top: discoverRef.current.offsetTop })}>
               Discover
             </Button>
-            <Button  href="#!" ml={2}>
+            <Button  ml={2}>
             <Link to="/app">
               Go to the Gatsboard now!
               </Link>
@@ -66,13 +68,14 @@ const Page = () => {
         }}
       >
         <Flex textAlign="center" alignItems="center" flexDirection="column">
-        <Heading sx={{fontSize:"6vw !important"}}>Say welcome to</Heading>
+        <Heading variant="bigTitle">Say welcome to</Heading>
           <StaticImage
             src="../../static/img/gatsboard.png"
             alt="Gatsboard"
             placeholder="blurred"
             width={600}
           />
+          <Heading pb={4}>A soundboard made width GatsbyJS</Heading>
           <Button variant='primaryBig' onClick={()=>window.scrollTo({ behavior: 'smooth', top: createRef.current.offsetTop })}>More Infos</Button>
         </Flex>
         <div class="custom-shape-divider-bottom-1632974164">
@@ -103,15 +106,11 @@ const Page = () => {
               </Flex>
             </Box>
             <Box width={[1, 1, 1 / 2]} py={2}>
-              <Heading>Create!</Heading>
+              <Heading variant="sectionTitle">Create !</Heading>
               <Text py={3}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap{" "}
+                Get your best groovy songs, sounds, memes from Youtube, Soundcloud, Vimeo and turn it to a real <Text as="span" fontWeight="bold">funky Gatsboard</Text>!
               </Text>
-              <Link to="/app"><Button variant='primaryBig'>Let's Create!</Button></Link>
+              <Link to="/app"><Button variant='primaryBig'>Let's Create</Button></Link>
             </Box>
           </Flex>
         </Box>
@@ -126,13 +125,9 @@ const Page = () => {
             flexWrap="wrap"
           >
             <Box width={[1, 1, 1 / 2]} py={2} textAlign={["left","left","right"]}>
-              <Heading>Share!</Heading>
+              <Heading variant="sectionTitle">Share !</Heading>
               <Text py={3}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap{" "}
+                Because "sharing is caring", go sociadelic and share your best <Text as="span" fontWeight="bold">Gatsboard</Text>
               </Text>
               <Link to="/app"><Button variant='primaryBig'>Let's Create!</Button></Link>
             </Box>
@@ -152,8 +147,8 @@ const Page = () => {
 
       <Box ref={discoverRef} backgroundColor="text" color="background">
         <Box variant="container" py={12}>
-          <Heading textAlign="center" pb={6}>
-            Featured Gasboards!
+          <Heading  variant="sectionTitle" textAlign="center" pb={6}>
+            Featured Gasboards
           </Heading>
           <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
             <Box width={[1, 1, 1 / 3]}>
@@ -186,6 +181,9 @@ const Page = () => {
                 />
               </Flex>
             </Box>
+          </Flex>
+          <Flex alignItems="center" justifyContent="center" p={2}>
+          <Link to="/boards"><Button variant='primaryBig'>View all Boards</Button></Link>
           </Flex>
         </Box>
       </Box>
