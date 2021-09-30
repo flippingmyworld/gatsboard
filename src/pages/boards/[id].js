@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import App from '../app';
 import { connect } from 'react-redux';
 import { loadProject } from '../../redux/actions/settings';
+import ReduxWrapper from "../..//redux"
 const Board = ({ id, dispatch }) => {
   useEffect(() => {
     const requestOptions = {
@@ -18,7 +19,7 @@ const Board = ({ id, dispatch }) => {
         }
       });
   }, []);
-  return <App />;
+  return <ReduxWrapper><App /></ReduxWrapper>;
 };
 
 export default connect()(Board);

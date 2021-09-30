@@ -16,7 +16,7 @@ pre {
     overflow-x: scroll;
 }
 
-.custom-shape-divider-bottom-1632970288 {
+.custom-shape-divider-bottom-1632974164 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -26,13 +26,13 @@ pre {
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1632970288 svg {
+.custom-shape-divider-bottom-1632974164 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  height: 77px;
 }
 
-.custom-shape-divider-bottom-1632970288 .shape-fill {
+.custom-shape-divider-bottom-1632974164 .shape-fill {
   fill: #FFFFFF;
 }
