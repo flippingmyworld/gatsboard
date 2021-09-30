@@ -1,6 +1,5 @@
 import React, { useEffect ,useState} from 'react';
-import App from '../../components/App';
-import ReduxWrapper from "../../redux"
+import App from '../app';
 
 const Board = ({ id }) => {
   const [project, setProject] = useState(false);
@@ -19,7 +18,7 @@ const Board = ({ id }) => {
         }
       });
   }, []);
-  return <ReduxWrapper><App project={project}/></ReduxWrapper>;
+  return <App project={project}/>;
 };
 
 export default Board;
