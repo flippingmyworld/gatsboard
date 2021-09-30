@@ -1,4 +1,8 @@
 
+<a  href="https://gatsboard.gatsbyjs.io/" target="_blank">
+<img src="https://gatsboard.gatsbyjs.io/img/image-og.jpg" alt="The Funky GatsBoards" />
+</a>
+
 # The Funky GatsBoard - Gatsby FuncJam '21
 
 This Web app let's you create soundboard from different sources (youtube, soundcloud, vimeo...).
