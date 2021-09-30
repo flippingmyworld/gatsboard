@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Macaw`,
-        short_name: `Macaw`,
+        name: `Gatsboard`,
+        short_name: `Gatsboard`,
         display: `standalone`,
         start_url: `/`,
         background_color: `#0F2026`,
