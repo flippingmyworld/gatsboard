@@ -7,13 +7,9 @@ import { ThemeProvider } from "styled-components";
 import Pad from "./Pad";
 import EmptyPad from "./EmptyPad";
 import { Helmet } from "react-helmet";
-import { withPrefix } from "gatsby";
-// import './App.scss';
-// import './App.global.scss';
 import GroupsTabs from "./GroupsTabs";
 import { reorderPads, pressKey } from "../redux/actions/pads";
 import { updateSettings, loadProject } from "../redux/actions/settings";
-// import Notifications from "./Notifications";
 import Search from "./Search";
 import { GlobalStyle, SiteWrapper } from "../theme/Site.style";
 import theme from "../theme";
@@ -132,10 +128,7 @@ const App = ({ groups, pads, settings, dispatch, state, project }) => {
           </title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
-          <meta
-            property="og:image"
-            content={`${withPrefix("/")}img/image-og.jpg`}
-          />
+          <meta property="og:image" content="https://gatsboard.gatsbyjs.io/img/image-og.jpg" />
         </Helmet>
         <Box minHeight="100vh" width="100%" bg="background" color="text">
           <Flex alignItems="center" flexWrap={["wrap", "nowrap"]}>
