@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "The Funky Gatsboard is a soundboard made with GatsbyJS.",
   "author": "Flippingmyworld <contact@flippingmyworld.com>",
+  "repository": "github:flippingmyworld/gatsby-funcjam-21",
   "private": true,
   "scripts": {
     "build": "gatsby build",
@@ -46,6 +47,7 @@
     "styled-system": "^5.1.5"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatsby-functions"
   ]
 }
