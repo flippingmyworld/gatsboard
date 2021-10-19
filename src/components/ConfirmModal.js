@@ -41,7 +41,7 @@ const ConfirmModal = ({ message, isOpen, onClose, onValidate }) => {
             {message}
           </Text>
           <Box p={2}>
-            <Button onClick={() => onValidate()}>Oui</Button>
+            <Button onClick={() => onValidate()}>Yes</Button>
           </Box>
           <Box p={2}>
             <Button
@@ -51,7 +51,7 @@ const ConfirmModal = ({ message, isOpen, onClose, onValidate }) => {
                 onClose();
               }}
             >
-              Non
+              No
             </Button>
           </Box>
         </Flex>
