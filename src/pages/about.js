@@ -10,7 +10,7 @@ const Page = () => {
         <h1 style={{ paddingTop: "30px" }}>About</h1>
         <h2>What?</h2>
         <p>
-          The Funky Gatsboard
+          The Funky Gatsboard !
         </p>
         <h2>Why?</h2>
         <p>
