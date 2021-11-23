@@ -21,7 +21,7 @@
     "@styled-system/theme-get": "^5.1.2",
     "babel-plugin-styled-components": "^1.13.2",
     "firebase": "^9.1.0",
-    "gatsby": "next",
+    "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "next",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-loadable-components-ssr": "^3.4.0",
